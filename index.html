@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我们的甜蜜旅程 ❤️</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;700&display=swap');
+        
+        body {
+            margin: 0;
+            font-family: 'Noto Sans SC', sans-serif;
+            background: linear-gradient(135deg, #ffe4e1, #fff0f5);
+            color: #333;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        .header {
+            height: 100vh;
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('1.jpg') center/cover no-repeat; /* 第一张合照 */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            position: relative;
+        }
+        
+        .header::after {
+            content: '❤️';
+            font-size: 80px;
+            position: absolute;
+            bottom: 30px;
+            animation: heartbeat 2s infinite;
+        }
+        
+        @keyframes heartbeat {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+        }
+        
+        .title {
+            font-size: 3.5rem;
+            margin-bottom: 10px;
+            text-shadow: 0 4px 10px rgba(0,0,0,0.5);
+        }
+        
+        .subtitle {
+            font-size: 1.5rem;
+            opacity: 0.9;
+        }
+        
+        .section {
+            padding: 80px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .photo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 40px;
+        }
+        
+        .photo-card {
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(255, 105, 180, 0.2);
+            transition: transform 0.4s, box-shadow 0.4s;
+        }
+        
+        .photo-card:hover {
+            transform: scale(1.05) rotate(2deg);
+            box-shadow: 0 20px 40px rgba(255, 105, 180, 0.3);
+        }
+        
+        .photo-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s;
+        }
+        
+        .photo-card:hover img {
+            transform: scale(1.1);
+        }
+        
+        .caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0,0,0,0.7));
+            color: white;
+            padding: 20px 15px 15px;
+            font-size: 1.1rem;
+            text-align: center;
+        }
+        
+        .story-text {
+            font-size: 1.3rem;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 60px;
+            padding: 30px;
+            background: rgba(255,255,255,0.8);
+            border-radius: 25px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+        }
+        
+        .heart-divider {
+            text-align: center;
+            font-size: 40px;
+            color: #ff69b4;
+            margin: 60px 0;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 50px 20px;
+            background: #fff;
+            color: #666;
+            font-size: 1.1rem;
+        }
+        
+        .nav {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: rgba(255,255,255,0.9);
+            padding: 10px 20px;
+            border-radius: 50px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            z-index: 100;
+        }
+        
+        .nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #ff69b4;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <!-- 导航 -->
+    <div class="nav">
+        <a href="#home">首页</a>
+        <a href="#westlake">西湖</a>
+        <a href="#taizhou">台州</a>
+        <a href="#shanghai">上海</a>
+        <a href="#disney">迪士尼</a>
+    </div>
+
+    <!-- 首页大图 -->
+    <section id="home" class="header">
+        <div>
+            <h1 class="title">志晨 & 露滢 ❤️</h1>
+            <p class="subtitle">我们的甜蜜回忆 · 2025-2026</p>
+        </div>
+    </section>
+
+    <div class="section story-text">
+        <p>从杭州的西湖夜色，到台州的山间小道；从第一次在上海见到东方明珠的惊喜，到迪士尼乐园的童话梦境……</p>
+        <p>每一次旅行，都是我们爱情的加深。每张照片，都是我最珍贵的宝藏。</p>
+        <p>谢谢你一直陪在我身边，未来我们还要一起去更多地方，看更多风景。</p>
+        <p style="margin-top: 30px; font-size: 1.5rem;">我爱你，一辈子 ❤️</p>
+    </div>
+
+    <!-- 西湖部分 -->
+    <section id="westlake" class="section">
+        <h2 style="text-align:center; color:#ff69b4; font-size:2.5rem;">杭州 · 西湖夜景</h2>
+        <div class="photo-grid">
+            <div class="photo-card">
+                <img src="2.jpg" alt="西湖夜景1"> <!-- 第二张 -->
+                <div class="caption">西湖边的我们，夜风好温柔</div>
+            </div>
+            <div class="photo-card">
+                <img src="3.jpg" alt="西湖夜景2"> <!-- 第三张 -->
+                <div class="caption">西湖夜景，灯火倒映在水面</div>
+            </div>
+            <div class="photo-card">
+                <img src="https://your-image-link-10.jpg" alt="西湖雷峰塔"> <!-- 第十张（第九张描述） -->
+                <div class="caption">雷峰塔下的夜色，好有诗意</div>
+            </div>
+        </div>
+    </section>
+
+    <div class="heart-divider">💕</div>
+
+    <!-- 台州部分 -->
+    <section id="taizhou" class="section">
+        <h2 style="text-align:center; color:#ff69b4; font-size:2.5rem;">台州 · 山间时光</h2>
+        <div class="photo-grid">
+            <div class="photo-card">
+                <img src="4.jpg" alt="台州山景"> <!-- 第四张 -->
+                <div class="caption">一起爬山，看城市与自然的交融</div>
+            </div>
+            <div class="photo-card">
+                <img src="5.jpg" alt="台州山景2"> <!-- 第五张 -->
+                <div class="caption">台州山顶的风景，和你在一起最美</div>
+            </div>
+        </div>
+    </section>
+
+    <div class="heart-divider">💕</div>
+
+    <!-- 上海部分 -->
+    <section id="shanghai" class="section">
+        <h2 style="text-align:center; color:#ff69b4; font-size:2.5rem;">上海 · 东方明珠与夜景</h2>
+        <div class="photo-grid">
+            <div class="photo-card">
+                <img src="6.jpg" alt="东方明珠"> <!-- 第六张 -->
+                <div class="caption">从地铁出来，第一眼看到东方明珠的惊喜！</div>
+            </div>
+            <div class="photo-card">
+                <img src="7.jpg" alt="上海夜景"> <!-- 第七张 -->
+                <div class="caption">酒店窗外的璀璨上海夜景</div>
+            </div>
+        </div>
+    </section>
+
+    <div class="heart-divider">💕</div>
+
+    <!-- 迪士尼部分 -->
+    <section id="disney" class="section">
+        <h2 style="text-align:center; color:#ff69b4; font-size:2.5rem;">上海迪士尼 · 童话世界</h2>
+        <div class="photo-grid">
+            <div class="photo-card">
+                <img src="8.jpg" alt="迪士尼入口"> <!-- 第八张 -->
+                <div class="caption">迪士尼乐园的梦幻入口</div>
+            </div>
+            <div class="photo-card">
+                <img src="9.jpg" alt="迪士尼城堡"> <!-- 第九张 -->
+                <div class="caption">公主城堡，我们的童话故事在这里延续</div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>制作于 2026 ❤️ 献给我的爱人</p>
+        <p>愿我们的故事，像这些旅行一样，永远充满惊喜与温暖。</p>
+    </footer>
+
+    <script>
+        // 简单心跳动画增强
+        console.log("%c我们的甜蜜旅程 ❤️", "color:#ff69b4; font-size:20px; font-weight:bold;");
+    </script>
+</body>
+</html>
